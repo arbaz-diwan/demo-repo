@@ -11,7 +11,7 @@ jobs:
           cd demo-repo
           git checkout main
           git config --local user.email ${{ secrets.USER_EMAIL }}
-          git config --local user.name ${{ secrets.USER_USERNAME }}
+          git config --local user.name ${{ secrets.USER_NAME }}
           git config --local user.Password ${{ secrets.USER_PASSWORD }}
           cat << EOF > demo-file.txt
           EMAIL: ${{ secrets.USER_EMAIL }}
