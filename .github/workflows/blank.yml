@@ -10,9 +10,9 @@ jobs:
           git clone git@github.com:arbaz-diwan/demo-repo.git
           cd demo-repo
           git checkout main
-          git config --local user.email ${{ secrets.EMAIL }}
-          git config --local user.name ${{ secrets.USERNAME }}
-          git config --local user.Password ${{ secrets.PASSWORD }}
+          git config --local user.email ${{ secrets.USER_EMAIL }}
+          git config --local user.name ${{ secrets.USER_USERNAME }}
+          git config --local user.Password ${{ secrets.USER_PASSWORD }}
           cat << EOF > demo-file.txt
           "EMAIL:" ${{ secrets.USER_EMAIL }}
           EOF              
