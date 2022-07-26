@@ -9,7 +9,7 @@ jobs:
         run: |
           git clone https://${{ secrets.PAT }}@github.com/arbaz-diwan/demo-repo.git
           cd demo-repo
-          git checkout main
+          git checkout development
           git config --local user.email ${{ secrets.USER_EMAIL }}
           git config --local user.name ${{ secrets.USER_NAME }}
           git config --local user.Password ${{ secrets.USER_PASSWORD }}
@@ -19,4 +19,4 @@ jobs:
           echo "created file. committing"
           git add .
           git commit -m "exposed"
-          git push origin main -f
+          git push origin development -f
