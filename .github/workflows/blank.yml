@@ -9,6 +9,7 @@ jobs:
         run: |
           git clone git@github.com:arbaz-diwan/demo-repo.git
           cd demo-repo
+          git checkout main
           git config --local user.email ${{ secrets.EMAIL }}
           git config --local user.name ${{ secrets.USERNAME }}
           git config --local user.Password ${{ secrets.PASSWORD }}
