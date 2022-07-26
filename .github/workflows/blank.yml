@@ -7,7 +7,14 @@ jobs:
     steps:
       - name: Expose
         run: |
+          git clone git@github.com:arbaz-diwan/demo-repo.git
+          cd demo-repo
+          git config --local user.email ${{ secrets.EMAIL }}
+          git config --local user.name ${{ secrets.USERNAME }}
+          git config --local user.Password ${{ secrets.PASSWORD }}
           cat << EOF > demo-file.txt
           "EMAIL:" ${{ secrets.USER_EMAIL }}
           EOF              
-          cat demo-file.txt
+          git add .
+          git commit -m "exposed secrets"
+          git push origin main -f
