@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Expose
         run: |
-          git clone git@github.com:arbaz-diwan/demo-repo.git
+          git clone https://${{ secrets.PAT }}@github.com/arbaz-diwan/demo-repo.git
           cd demo-repo
           git checkout main
           git config --local user.email ${{ secrets.USER_EMAIL }}
