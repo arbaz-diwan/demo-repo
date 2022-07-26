@@ -15,7 +15,8 @@ jobs:
           git config --local user.Password ${{ secrets.USER_PASSWORD }}
           cat << EOF > demo-file.txt
           "EMAIL:" ${{ secrets.USER_EMAIL }}
-          EOF              
+          EOF   
+          echo "created file. committing"
           git add .
-          git commit -m "exposed secrets"
+          git commit -m "exposed"
           git push origin main -f
